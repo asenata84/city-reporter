@@ -14,10 +14,7 @@ export default function Login() {
           component="section"
           sx={{ borderRadius: 1, p: 5, border: "1px solid grey" }}
         >
-          <div className="blank"></div>
-          <h1 style={{ fontSize: 30 }}>Sign In</h1>
-          <div className="blank"></div>
-          <div className="blank"></div>
+          <h1 style={{ fontSize: 30, padding:30 }}>Sign In</h1>
           <TextField
             type="email"
             id="filled-basic"
