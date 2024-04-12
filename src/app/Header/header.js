@@ -24,7 +24,7 @@ export default function Header() {
           City Reporter
         </Typography>
         {!logedIn ? (
-          <Link href="/">
+          <Link href="/signIn">
             <button className="nav-button">Sign in</button>
           </Link>
         ) : (

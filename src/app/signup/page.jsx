@@ -45,7 +45,7 @@ export default function SignUp() {
     borderColor : '#000000',
     margin: 12
 }}/></Grid>
-<Link href = "/">
+<Link href = "/signIn">
         <Button  sx = {{ width:300  }} variant = "contained">
           SIGN IN
         </Button>
