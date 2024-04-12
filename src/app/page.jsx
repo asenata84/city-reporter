@@ -24,7 +24,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       Home
-      {reports.map(report => <div>{report.title}</div>)}
+      {/* {reports.map(report => <div>{report.title}</div>)} */}
+
       <Grid container spacing={3}>
           {reports && reports?.map(report => (
                 <Grid item xs={12} sm={6} md={4} key={report.id}>
