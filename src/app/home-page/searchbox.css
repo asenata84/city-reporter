@@ -1,12 +1,12 @@
 #searchbox-with-buttons {
-    display: 'flex';
-    align-items: 'center';
+    display: flex;
+    align-items: center;
 }
 
 #filled-search {
-    margin-right: '8px';
+    margin-right: 8px;
 }
 
 #go-button {
-    margin-right: '8px';
+    margin-right: 8px;
 }
