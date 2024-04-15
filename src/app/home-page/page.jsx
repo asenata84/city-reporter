@@ -15,10 +15,22 @@ export default function Home() {
     // Search logic here
   };
 
+  const handleGo = () => {
+    // Logic for 'GO' button
+  };
+
+  const handleCreateNew = () => {
+    // Logic for 'CREATE NEW' button
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       Home
-      <SearchBox onSeach={handleSearch} />
+      <SearchBox
+        onSeach={handleSearch}
+        onGo={handleGo}
+        onCreateNew={handleCreateNew}
+      />
       {/* Render search results based on searchTerm */}
       <Box>
         <Grid container spacing={4}>
