@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import SearchBox from "./searchbox";
 import { useState } from "react";
+import './card.css';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
