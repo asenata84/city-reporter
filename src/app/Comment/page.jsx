@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import Box from '@mui/material/Box';
+
 
 const CommentBox = () => {
   const [comment, setComment] = useState('');
@@ -19,58 +21,61 @@ const CommentBox = () => {
     if (comment.trim() !== '') {
       setCommentsList([...commentsList, comment]);
       setComment('');
-      
     }
   };
 
+  
   return (
     
     <div>
+      <div>
+
+      <h3 style={{  marginLeft: '180px' }} >Comments:</h3>
+      <List sx={{  marginLeft: '190px' }} >
+        {  
+         commentsList.map((comment, index) => (
+          <ListItem key={index}>
+            <Box component="section"
+            sx = {{
+                borderRadius: 1,
+                border: "1px solid grey", 
+                backgroundColor:"#bfbdbd" }} 
+            >
+            <ListItemText primary={comment} />
+            </Box>
+          </ListItem>
+          
+          ))
+        
+        }
+      </List>
       
-      <h2 style={{marginLeft: '460px',padding: '10px'}}> Add your comment here:</h2>
+    </div>
+      <h2 style={{marginLeft: '180px',padding: '10px'}}> Add your comment here:</h2>
       <form onSubmit={handleSubmit}>
-      <center>
+      
         <TextField
           multiline
-          rows={7}
+          rows={5}
           placeholder="Text....."
           value={comment}
           onChange={handleChange}
           style={{ width: '40%' }}
-          sx={{ backgroundColor: 'white', marginBottom: '-15px', borderRadius: 5 }}
+          sx={{ backgroundColor: 'white', marginLeft: "180px", borderRadius: 5 }}
         />
-        </center>
-       
+        
         <br />
         <center>
         <Button 
         type="submit"
          variant="contained" 
          color="primary"
-         sx={{ borderRadius: 0 , marginLeft: '530px' }} >
+         sx={{ borderRadius: 0 , marginLeft: '180px', marginTop:"10px" }} >
           SUBMIT
         </Button>
         </center>
       </form>
       
-      <div>
-      
-      
-        <h3 style={{  marginLeft: '460px' }} >Comments:</h3>
-        <List sx={{  marginLeft: '450px' }} >
-          { 
-             
-           commentsList.map((comment, index) => (
-            <ListItem key={index}>
-              <ListItemText primary={comment} />
-            </ListItem>
-            
-            ))
-          
-          }
-        </List>
-        
-      </div>
     </div>
     
   );
